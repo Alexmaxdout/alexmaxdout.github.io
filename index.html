@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alex Doe — CS • Software Engineering • AI</title>
+  <meta name="description" content="Portfolio website for a Computer Science / Software Engineering / AI master's student: projects, research, skills, resume, and contact." />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Alex Doe — CS • Software Engineering • AI" />
+  <meta property="og:description" content="Projects, research, skills, resume, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-username.github.io" />
+  <meta property="og:image" content="https://your-username.github.io/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config: fonts & container
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Cantarell", "Helvetica Neue", "Arial", "sans-serif"],
+          },
+          boxShadow: {
+            soft: "0 10px 25px -5px rgba(0,0,0,.2), 0 8px 10px -6px rgba(0,0,0,.2)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Smooth scrolling */
+    html { scroll-behavior: smooth; }
+    /* Hide focus outlines only when using mouse */
+    :focus:not(:focus-visible) { outline: none; }
+  </style>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Doe",
+    "url": "https://your-username.github.io",
+    "sameAs": [
+      "https://github.com/your-username",
+      "https://www.linkedin.com/in/your-handle",
+      "https://scholar.google.com/citations?user=your-id"
+    ],
+    "jobTitle": "M.S. Student, Computer Science (AI)",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Your University"
+    }
+  }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-indigo-500/30">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/70 border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#home" class="flex items-center gap-3 text-slate-100 font-semibold">
+          <div class="size-9 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-400"></div>
+          <span>Alex Doe</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+          <a href="#projects" class="hover:text-white">Projects</a>
+          <a href="#research" class="hover:text-white">Research</a>
+          <a href="#skills" class="hover:text-white">Skills</a>
+          <a href="#experience" class="hover:text-white">Experience</a>
+          <a href="#contact" class="hover:text-white">Contact</a>
+          <a href="resume.pdf" class="inline-flex items-center gap-2 rounded-xl border border-white/15 px-3 py-1.5 hover:bg-white/5" aria-label="Download Resume">
+            <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            Resume
+          </a>
+          <button id="themeToggle" class="rounded-xl border border-white/15 p-2 hover:bg-white/5" aria-label="Toggle Theme">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" class="size-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </button>
+        </nav>
+        <button id="menuBtn" class="md:hidden p-2 rounded-xl border border-white/15" aria-label="Open Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden border-t border-white/10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-3 text-slate-300">
+        <a href="#projects" class="hover:text-white">Projects</a>
+        <a href="#research" class="hover:text-white">Research</a>
+        <a href="#skills" class="hover:text-white">Skills</a>
+        <a href="#experience" class="hover:text-white">Experience</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+        <a href="resume.pdf" class="hover:text-white">Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute -top-16 right-10 h-64 w-64 rounded-full bg-indigo-500/20 blur-3xl"></div>
+      <div class="absolute bottom-0 left-10 h-72 w-72 rounded-full bg-cyan-400/10 blur-3xl"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-28">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <p class="text-xs uppercase tracking-widest text-indigo-300/90">M.S. • Computer Science • AI</p>
+          <h1 class="mt-3 text-4xl sm:text-5xl font-extrabold leading-tight text-white">
+            Building human-centered AI and reliable software systems
+          </h1>
+          <p class="mt-5 text-lg text-slate-300 max-w-2xl">
+            I’m Alex, a software engineer and AI researcher focused on
+            production-ready ML, developer tooling, and ethical, secure systems. I love
+            turning research into scalable products.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="inline-flex items-center gap-2 rounded-2xl bg-white text-slate-900 px-4 py-2 font-semibold shadow-soft hover:translate-y-[-1px] transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10H7z"/><path d="M3 3h18v18H3z"/></svg>
+              View Projects
+            </a>
+            <a href="mailto:alex@university.edu" class="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-4 py-2 font-semibold hover:bg-white/5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email Me
+            </a>
+            <a href="https://github.com/your-username" class="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-4 py-2 font-semibold hover:bg-white/5" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.75.08-.74.08-.74 1.22.09 1.86 1.26 1.86 1.26 1.08 1.85 2.83 1.32 3.52 1.01.11-.8.42-1.32.76-1.62-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.47 11.47 0 0 1 6 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.86.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.61-2.82 5.63-5.5 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12 12 0 0 0 12 .5Z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto w-full max-w-sm">
+            <img src="headshot.jpg" alt="Portrait of Alex Doe" class="w-full rounded-3xl border border-white/10 shadow-soft object-cover aspect-[4/5]" />
+            <div class="absolute -right-4 -bottom-4 rounded-2xl bg-slate-900/70 backdrop-blur border border-white/10 px-4 py-3 text-sm">
+              <p class="font-semibold">Actively seeking Summer 2026 internships</p>
+              <p class="text-slate-400">ML Engineer • Research • Platform</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key metrics / quick facts -->
+  <section class="py-12 border-y border-white/10 bg-slate-900/30">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="rounded-2xl border border-white/10 p-6">
+        <p class="text-3xl font-extrabold">12+</p>
+        <p class="text-slate-400">Production & research projects</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 p-6">
+        <p class="text-3xl font-extrabold">3</p>
+        <p class="text-slate-400">Peer-reviewed publications</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 p-6">
+        <p class="text-3xl font-extrabold"><span aria-label="GPU" title="GPU">⚡</span> TensorRT</p>
+        <p class="text-slate-400">Sub-300ms LLM inference</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 p-6">
+        <p class="text-3xl font-extrabold">AWS • Azure • GCP</p>
+        <p class="text-slate-400">Cloud-native deployments</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold">Selected Projects</h2>
+          <p class="mt-2 text-slate-400">Production-grade builds and research prototypes.</p>
+        </div>
+        <a href="https://github.com/your-username?tab=repositories" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 rounded-xl border border-white/15 px-3 py-1.5 hover:bg-white/5">View all on GitHub →</a>
+      </div>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Card 1 -->
+        <article class="group rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-video bg-gradient-to-br from-indigo-500/30 to-cyan-400/20 grid place-items-center">
+            <span class="text-sm text-white/80">Demo thumbnail</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between gap-3">
+              <h3 class="font-bold text-lg">NeuroVision — Real-Time Multimodal Assistant</h3>
+              <a href="https://github.com/your-username/neurovision" class="text-sm text-indigo-300 hover:text-white" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <p class="mt-2 text-slate-400">Low-latency LLM with Whisper, YOLOv8, TensorRT. Deployed on Kubernetes with autoscaling GPU nodes.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-300">
+              <li class="rounded-xl bg-white/5 px-2 py-1">Python</li>
+              <li class="rounded-xl bg-white/5 px-2 py-1">PyTorch</li>
+              <li class="rounded-xl bg-white/5 px-2 py-1">TensorRT</li>
+              <li class="rounded-xl bg-white/5 px-2 py-1">Kubernetes</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="group rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-video bg-gradient-to-br from-pink-500/30 to-yellow-400/20 grid place-items-center">
+            <span class="text-sm text-white/80">Demo thumbnail</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between gap-3">
+              <h3 class="font-bold text-lg">SecureAPI — Zero-Trust Gateway</h3>
+              <a href="https://github.com/your-username/secureapi" class="text-sm text-indigo-300 hover:text-white" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <p class="mt-2 text-slate-400">OWASP-aligned gateway enforcing auth, JWT validation, rate limiting, and anomaly detection with lightweight ML.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-300">
+              <li class="rounded-xl bg-white/5 px-2 py-1">Go</li>
+              <li class="rounded-xl bg-white/5 px-2 py-1">Envoy</li>
+              <li class="rounded-xl bg-white/5 px-2 py-1">OPA</li>
+              <li class="rounded-xl bg-white/5 px-2 py-1">Prometheus</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project Card 3 -->
+        <article class="group rounded-2xl border border-white/10 overflow-hidden hover:border-white/20 transition">
+          <div class="aspect-video bg-gradient-to-br from-emerald-500/30 to-sky-400/20 grid place-items-center">
+            <span class="text-sm text-white/80">Demo thumbnail</span>
+          </div>
+          <div class="p-5">
+            <div class="flex items-center justify-between gap-3">
+              <h3 class="font-bold text-lg">AutoGrader — AI TA for CS Courses</h3>
+              <a href="https://github.com/your-username/autograder" class="text-sm text-indigo-300 hover:text-white" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <p class="mt-2 text-slate-400">LLM-assisted feedback for assignments with sandboxed execution, plagiarism checks, and rubric-based scoring.</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-xs text-slate-300">
+              <li class="rounded-xl bg-white/5 px-2 py-1">TypeScript</li>
+              <li class="rounded-xl bg-white/5 px-2 py-1">Node.js</li>
+              <li class="rounded-xl bg-white/5 px-2 py-1">Docker</li>
+              <li class="rounded-xl bg-white/5 px-2 py-1">Postgres</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-10">
+        <a href="projects.html" class="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-4 py-2 font-semibold hover:bg-white/5">
+          Browse all projects
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research & Publications -->
+  <section id="research" class="py-20 bg-slate-900/30 border-y border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Research & Publications</h2>
+      <p class="mt-2 text-slate-400">Papers, preprints, and open datasets.</p>
+
+      <ol class="mt-6 space-y-5">
+        <li class="rounded-2xl border border-white/10 p-5">
+          <p class="font-semibold">Doe, A., Smith, B. (2025). <em>Efficient Multimodal Inference with TensorRT and KV-Cache Optimizations</em>.</p>
+          <p class="text-slate-400 text-sm">In Proceedings of Awesome AI Conference. <a class="text-indigo-300 hover:text-white" href="#">PDF</a> • <a class="text-indigo-300 hover:text-white" href="#">Code</a></p>
+        </li>
+        <li class="rounded-2xl border border-white/10 p-5">
+          <p class="font-semibold">Doe, A., et al. (2024). <em>Detecting Prompt Injection in LLM-Agents</em>.</p>
+          <p class="text-slate-400 text-sm">ArXiv preprint. <a class="text-indigo-300 hover:text-white" href="#">ArXiv</a> • <a class="text-indigo-300 hover:text-white" href="#">Dataset</a></p>
+        </li>
+        <li class="rounded-2xl border border-white/10 p-5">
+          <p class="font-semibold">Doe, A., et al. (2023). <em>Privacy-Preserving Federated Learning for Edge IoT</em>.</p>
+          <p class="text-slate-400 text-sm">Journal of Secure ML. <a class="text-indigo-300 hover:text-white" href="#">PDF</a></p>
+        </li>
+      </ol>
+
+      <div class="mt-8">
+        <a href="https://scholar.google.com/citations?user=your-id" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-4 py-2 font-semibold hover:bg-white/5">Google Scholar Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Skills</h2>
+      <p class="mt-2 text-slate-400">Core technical strengths and tools.</p>
+
+      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-white/10 p-6">
+          <h3 class="font-semibold">AI / ML</h3>
+          <p class="mt-2 text-slate-300 text-sm">Python, PyTorch, TensorFlow, Transformers, OpenAI API, TensorRT, ONNX, LangChain, RAG, RLHF, MLflow.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <h3 class="font-semibold">Backend & Systems</h3>
+          <p class="mt-2 text-slate-300 text-sm">Node.js, Go, REST/gRPC, GraphQL, Postgres, Redis, Kafka, Docker, Kubernetes, CI/CD (GitHub Actions).</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <h3 class="font-semibold">Security & Cloud</h3>
+          <p class="mt-2 text-slate-300 text-sm">OWASP, OAuth2/OIDC, JWT, SSO (Entra ID), AWS/Azure/GCP, IaC (Terraform), SIEM/Monitoring.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <h3 class="font-semibold">Frontend</h3>
+          <p class="mt-2 text-slate-300 text-sm">TypeScript, React, Vite, Tailwind, Next.js, Accessibility (WCAG), Testing (Vitest/Jest).</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <h3 class="font-semibold">Data</h3>
+          <p class="mt-2 text-slate-300 text-sm">Pandas, NumPy, Airflow, dbt, Lakehouse, Vector DBs (FAISS, pgvector).</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <h3 class="font-semibold">Soft Skills</h3>
+          <p class="mt-2 text-slate-300 text-sm">Teaching, technical writing, mentorship, cross-functional collaboration, code reviews.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20 bg-slate-900/30 border-y border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Experience</h2>
+      <div class="mt-6 space-y-6">
+        <div class="rounded-2xl border border-white/10 p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">Graduate Research Assistant — Your University</h3>
+            <span class="text-sm text-slate-400">2024 — Present</span>
+          </div>
+          <ul class="mt-2 list-disc pl-5 text-slate-300 text-sm space-y-1">
+            <li>Optimized multimodal inference pipeline reducing latency by 42% using TensorRT and quantization-aware training.</li>
+            <li>Co-authored paper accepted at Awesome AI Conference 2025.</li>
+            <li>Maintained Kubernetes cluster with GPU node autoscaling and GitOps workflows.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">Software Engineer Intern — TechCorp</h3>
+            <span class="text-sm text-slate-400">Summer 2024</span>
+          </div>
+          <ul class="mt-2 list-disc pl-5 text-slate-300 text-sm space-y-1">
+            <li>Built internal developer tool that cut CI times by 18%.</li>
+            <li>Designed a RAG service with pgvector and LangChain; improved search relevance by 23%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2">
+          <h2 class="text-3xl sm:text-4xl font-extrabold">Let’s build something great</h2>
+          <p class="mt-2 text-slate-400">I’m open to internships, research collaborations, and ML engineering roles. Email is best!</p>
+          <form action="mailto:alex@university.edu" method="post" enctype="text/plain" class="mt-6 grid sm:grid-cols-2 gap-4">
+            <input required aria-label="Your name" name="name" placeholder="Your name" class="rounded-xl bg-slate-900/60 border border-white/10 px-4 py-3 placeholder:text-slate-500" />
+            <input required type="email" aria-label="Your email" name="email" placeholder="Email" class="rounded-xl bg-slate-900/60 border border-white/10 px-4 py-3 placeholder:text-slate-500" />
+            <textarea required aria-label="Message" name="message" placeholder="Message" class="sm:col-span-2 rounded-xl bg-slate-900/60 border border-white/10 px-4 py-3 placeholder:text-slate-500 h-36"></textarea>
+            <button class="sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-white text-slate-900 px-4 py-2 font-semibold shadow-soft hover:translate-y-[-1px] transition" type="submit">Send</button>
+          </form>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6 h-fit">
+          <h3 class="font-semibold">Elsewhere</h3>
+          <ul class="mt-3 space-y-2 text-slate-300">
+            <li><a class="hover:text-white" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a class="hover:text-white" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a class="hover:text-white" href="https://scholar.google.com/citations?user=your-id" target="_blank" rel="noopener">Google Scholar</a></li>
+            <li><a class="hover:text-white" href="https://x.com/your-handle" target="_blank" rel="noopener">X (Twitter)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-white/10 text-sm text-slate-400">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© <span id="year"></span> Alex Doe. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="#home" class="hover:text-white">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Theme toggle with localStorage
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const moon = document.getElementById('moon');
+    const sun = document.getElementById('sun');
+
+    const setTheme = (mode) => {
+      if (mode === 'light') {
+        root.classList.remove('dark');
+        document.body.classList.remove('bg-slate-950', 'text-slate-100');
+        document.body.classList.add('bg-white', 'text-slate-900');
+        sun.classList.add('hidden');
+        moon.classList.remove('hidden');
+      } else {
+        root.classList.add('dark');
+        document.body.classList.add('bg-slate-950', 'text-slate-100');
+        document.body.classList.remove('bg-white', 'text-slate-900');
+        sun.classList.remove('hidden');
+        moon.classList.add('hidden');
+      }
+      localStorage.setItem('theme', mode);
+    };
+
+    // initialize
+    const preferred = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    setTheme(preferred);
+
+    themeToggle?.addEventListener('click', () => {
+      const current = localStorage.getItem('theme') || 'dark';
+      setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  </script>
+</body>
+</html>
